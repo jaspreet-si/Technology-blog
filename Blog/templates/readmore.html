@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+    }
+
+    .blog-container {
+        text-align: center;
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 800px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333333;
+    }
+
+    .blog-image {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-content {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 20px;
+        color: #666666;
+    }
+</style>
+
+<div class="blog-container">
+    <h1 class="blog-title">{{ alldata.Blog_name }}</h1>
+    <hr>
+    <img class="blog-image" src="{{ alldata.Img.url }}" alt="Blog Image">
+    <hr>
+    <p class="blog-content">{{ alldata.Blog }}</p>
+</div>
+{% endblock %}
